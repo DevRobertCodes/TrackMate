@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+/* Reset Default */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Roots */
+:root {
+  --primary: #007bff;
+  --primary-hover: #0056b3;
+  --gray-text: #666;
+  --border-radius: 8px;
+}
+
+/* Login-Container */
+.login-container {
+  max-width: 450px;
+  min-height: 80vh;
+  margin: 5rem auto;
+  padding: 2rem;
+  background: linear-gradient(135deg, #ffffff, #f2f6fa);
+  border-radius: 1rem;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo */
+.logo {
+  font-size: 2rem;
+  text-align: center;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.logo i {
+    color: var(--primary);
+}
+
+.login-container p {
+  text-align: center;
+  font-size: 21px;
+  font-weight: 500;
+  font-family: Arial, sans-serif;
+  color: var(--gray-text);
+  margin-bottom: 1.5rem;
+}
+
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+}
+
+/* Input Fields */
+input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+input:focus {
+  outline: 1px solid var(--primary);
+  border-color: var(--primary);
+}
+
+
+#full-name, #confirm-password, #email{
+  display: none;
+  transition: all 0.3s ease-in-out;
+}
+
+
+/* Button */
+.btn {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: #007bff;
+  color: white;
+  margin-bottom: 10px;
+  margin-bottom: 8px;
+}
+
+.btn-primary:hover {
+  background: var(--primary-hover);
+}
+
+/* Toggle Auth Mode */
+#toggle-auth {
+  margin-top: 1rem;
+  font-style: normal;
+  font-size: 17px;
+  color: #333;
+  font-family: 'poppins', sans-serif;
+}
+
+#toggle-auth a {
+  text-decoration: none;
+  color: var(--primary);
+}
+
+
+
+/* Login Options */
+.login-options {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.75rem;
+}
+
+.login-options a {
+  font-size: 0.9rem;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.login-options a:hover,
+#toggle-auth a:hover {
+  text-decoration: underline;
+  color: var(--primary-hover);
+}
+
+/* Responsive Styles for mobiles */
+@media (max-width: 500px) {
+  .login-container {
+    margin: 2rem 1rem;
+    padding: 1.5rem;
+  }
+
+  .login-container p {
+    font-size: 16px;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  form {
+    margin-top: 2rem;
+  }
+
+  input {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .btn-primary {
+    margin-bottom: 0.5rem;
+  }
+
+  #toggle-auth {
+    font-size: 14px;
+  }
+
+  #toggle-auth {
+    font-size: 15px;
+  }
+
+  .login-options a{
+    font-size: 12px;
+  }
+}

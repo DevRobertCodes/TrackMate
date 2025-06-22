@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TrackMate | Expense Tracker</title>
+  <!-- Font Awesome Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+
+  <!-- ====== LOGIN PAGE ====== -->
+  <section class="login-page" id="login-page">
+    <div class="login-container">
+        <h1 class="logo"><i class="fas fa-wallet"></i> TrackMate</h1>
+        <p id="intro"></p>
+        <form id="auth-form">
+          <input type="text" id="full-name" placeholder="Full Name" required />
+          <input type="email" id="email" placeholder="Email" required />
+          <input type="text" id="username" placeholder="Username" required />
+          <input type="password" id="password" placeholder="Password" required />
+          <input type="password" id="confirm-password" placeholder="Confirm Password" />
+          <button type="submit" class="btn btn-primary" id="auth-button">Log In</button>
+        </form>
+          <!-- Toggle Auth Mode -->
+          <p id="toggle-auth">
+            Don't have an account?
+            <a href="#" id="switch-to-register">Create one</a>
+          </p>
+  
+        <div class="login-options">
+          <a href="#" id="guest-login">Continue as Guest</a>
+          <a href="#">Forgot Password?</a>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

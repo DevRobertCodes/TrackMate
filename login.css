@@ -9,11 +9,12 @@
 
 /* Roots */
 :root {
-  --primary: #007bff;
+  --primary: #0057d4;
   --primary-hover: #0056b3;
   --gray-text: #666;
   --border-radius: 8px;
 }
+
 
 /* Login-Container */
 .login-container {
@@ -53,6 +54,7 @@ form {
   display: flex;
   flex-direction: column;
   margin-top: 3rem;
+  transition: opacity 0.3s ease-in-out;
 }
 
 /* Input Fields */
@@ -69,13 +71,32 @@ input:focus {
   outline: 1px solid var(--primary);
   border-color: var(--primary);
 }
-
-
-#full-name, #confirm-password, #email{
-  display: none;
-  transition: all 0.3s ease-in-out;
+input::placeholder {
+  color: #999;
 }
 
+/* Dropdown Styling for Reset Page */
+select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  color: #333;
+  background-color: #fff;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg fill='%230057d4' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 25px 25px;
+  transition: border-color 0.3s ease;
+}
+
+select:focus {
+  outline: none;
+  border-color: var(--primary);
+}
 
 /* Button */
 .btn {
@@ -89,7 +110,7 @@ input:focus {
 }
 
 .btn-primary {
-  background: #007bff;
+  background: var(--primary);
   color: white;
   margin-bottom: 10px;
   margin-bottom: 8px;
@@ -113,12 +134,9 @@ input:focus {
   color: var(--primary);
 }
 
-
-
 /* Login Options */
 .login-options {
-  display: flex;
-  justify-content: space-between;
+  text-align: end;
   margin-top: 0.75rem;
 }
 
@@ -132,6 +150,47 @@ input:focus {
 #toggle-auth a:hover {
   text-decoration: underline;
   color: var(--primary-hover);
+}
+/* Responsive Styles for tablets */
+@media (max-width: 768px) {
+  .login-container {
+    margin: 3rem auto;
+    padding: 1.5rem;
+  }
+
+  .login-container p {
+    font-size: 18px;
+  }
+
+  .logo {
+    font-size: 1.8rem;
+  }
+
+  form {
+    margin-top: 2rem;
+  }
+
+  input {
+    padding: 0.75rem;
+    font-size: 0.95rem;
+  }
+
+  .btn {
+    padding: 0.75rem;
+    font-size: 0.95rem;
+  }
+
+  .btn-primary {
+    margin-bottom: 0.75rem;
+  }
+
+  #toggle-auth {
+    font-size: 16px;
+  }
+
+  .login-options a{
+    font-size: 14px;
+  }
 }
 
 /* Responsive Styles for mobiles */

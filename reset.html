@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TrackMate | Reset Password</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+  <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+
+  <section class="login-page">
+    <div class="login-container">
+      <h1 class="logo"><i class="fas fa-unlock"></i> Reset Password</h1>
+      <p>Enter your username and answer your security question.</p>
+
+      <form id="reset-form">
+        <input type="text" id="reset-username" placeholder="Username" required />
+        <select id="security-question" required>
+          <option value=""> Select your security question </option>
+          <option value="fav_food">What is your favorite food?</option>
+          <option value="birth_city">What city were you born?</option>
+          <option value="nickname">What is your childhood nickname?</option>
+          <option value="fav_sport">What is your favorite sport?</option>
+        </select>
+        <input type="text" id="reset-answer" placeholder="Your Answer" required />
+        <input type="password" id="new-password" placeholder="New Password" required />
+        <button type="submit" class="btn btn-primary">Reset Password</button>
+      </form>
+
+      <p class="login-options"><a href="index.html">Back to Login</a></p>
+    </div>
+  </section>
+
+  <script src="auth.js"></script>
+</body>
+</html>

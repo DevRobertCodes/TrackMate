@@ -17,13 +17,23 @@
       <h1 class="logo"><i class="fas fa-wallet"></i> TrackMate</h1>
       <p>Join TrackMate and take control of your spending.</p>
 
-      <form id="register-form">
+      <form id="auth-form">
         <input type="text" id="fullname" placeholder="Full Name" required />
         <input type="text" id="username" placeholder="Username" required />
-        <input type="password" id="password" placeholder="Password" required />
-        <input type="password" id="confirm-password" placeholder="Confirm Password" required />
+      
+        <div class="input-wrapper">
+          <input type="password" id="password" placeholder="Password" required />
+          <i class="fa-solid fa-eye-slash toggle-password" data-target="password"></i>
+        </div>
+      
+        <div class="input-wrapper">
+          <input type="password" id="confirm-password" placeholder="Confirm Password" required />
+          <i class="fa-solid fa-eye-slash toggle-password" data-target="confirm-password"></i>
+        </div>
+      
         <button type="submit" class="btn btn-primary">Register</button>
       </form>
+
 
       <p id="toggle-auth">
         Already have an account?

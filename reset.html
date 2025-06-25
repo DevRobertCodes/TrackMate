@@ -17,7 +17,7 @@
       <h1 class="logo"><i class="fas fa-unlock"></i> Reset Password</h1>
       <p>Enter your username and answer your security question.</p>
 
-      <form id="reset-form">
+      <form id="auth-form">
         <input type="text" id="reset-username" placeholder="Username" required />
         <select id="security-question" required>
           <option value=""> Select your security question </option>
@@ -26,12 +26,18 @@
           <option value="nickname">What is your childhood nickname?</option>
           <option value="fav_sport">What is your favorite sport?</option>
         </select>
-        <input type="text" id="reset-answer" placeholder="Your Answer" required />
-        <input type="password" id="new-password" placeholder="New Password" required />
+        <input type="text" id="security-answer" placeholder="Your Answer" required />
+        <div class="input-wrapper">
+          <input type="password" id="password" placeholder="Password" required />
+          <i class="fa-solid fa-eye-slash toggle-password" data-target="password"></i>
+        </div>
+        
+        <div class="input-wrapper">
+          <input type="password" id="confirm-password" placeholder="Confirm Password" required />
+          <i class="fa-solid fa-eye-slash toggle-password" data-target="confirm-password"></i>
+        </div>
         <button type="submit" class="btn btn-primary">Reset Password</button>
       </form>
-
-      <p class="login-options"><a href="index.html">Back to Login</a></p>
     </div>
   </section>
 

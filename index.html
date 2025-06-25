@@ -21,7 +21,10 @@
         <p id="intro"></p>
         <form id="auth-form">
           <input type="text" id="username" placeholder="Username" required />
-          <input type="password" id="password" placeholder="Password" required />
+         <div class="input-wrapper">
+           <input type="password" id="password" placeholder="Password" required />
+           <i class="fa-solid fa-eye-slash toggle-password" data-target="password"></i>
+         </div>
           <button type="submit" class="btn btn-primary" id="auth-button">Log In</button>
         </form>
           <!-- Toggle Auth Mode -->
@@ -36,6 +39,6 @@
     </div>
   </section>
 
-  <script src="script.js"></script>
+  <script src="auth.js"></script>
 </body>
 </html>

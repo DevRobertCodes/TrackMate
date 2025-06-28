@@ -122,7 +122,7 @@ document.querySelectorAll(".toggle-password").forEach((icon) => {
     });
 
   } else if (path.includes("reset.html")) {
-      const resetForm = document.getElementById("auth-form");
+    const resetForm = document.getElementById("auth-form");
     const usernameInput = document.getElementById("reset-username");
     const questionSelect = document.getElementById("security-question");
     const answerInput = document.getElementById("security-answer");

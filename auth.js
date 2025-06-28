@@ -126,7 +126,7 @@ document.querySelectorAll(".toggle-password").forEach((icon) => {
     const usernameInput = document.getElementById("reset-username");
     const questionSelect = document.getElementById("security-question");
     const answerInput = document.getElementById("security-answer");
-    const newPasswordInput = document.getElementById("new-password");
+    const newPasswordInput = document.getElementById("password");
     const confirmPasswordInput = document.getElementById("confirm-password");
 
     if (!resetForm) return;

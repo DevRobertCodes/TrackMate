@@ -87,10 +87,19 @@ input::placeholder {
   padding-right: 40px; /* space for the eye icon */
 }
 
+.icon-left {
+  position: absolute;
+  left: 10px;
+  top: 25%;
+  color: #333;
+  font-size: 1.2rem;
+  display: none;
+}
+
 .toggle-password {
   position: absolute;
   right: 10px;
-  top: 40%;
+  top: 35%;
   transform: translateY(-50%);
   cursor: pointer;
   color: #444;
@@ -175,6 +184,7 @@ select:focus {
   text-decoration: underline;
   color: var(--primary-hover);
 }
+
 /* Responsive Styles for tablets */
 @media (max-width: 768px) {
   .login-container {

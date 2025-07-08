@@ -15,25 +15,24 @@
   <section class="login-page">
     <div class="login-container">
       <h1 class="logo"><i class="fas fa-wallet"></i> TrackMate</h1>
-      <p>Join TrackMate and take control of your spending.</p>
-
+      <p>Create your account to start tracking expenses.</p>
       <form id="auth-form">
-        <input type="text" id="fullname" placeholder="Full Name" required />
-        <input type="text" id="username" placeholder="Username" required />
+        <input type="text" id="full-name" placeholder="Full Name" required />
+        <input type="text" id="username" placeholder="Username" required autocomplete="username" />
       
         <div class="input-wrapper">
-          <input type="password" id="password" placeholder="Password" required />
+          <i class="fa-solid fa-lock icon-left"></i>
+          <input type="password" id="password" placeholder="Password" required autocomplete="new-password"/>
           <i class="fa-solid fa-eye-slash toggle-password" data-target="password"></i>
         </div>
       
         <div class="input-wrapper">
-          <input type="password" id="confirm-password" placeholder="Confirm Password" required />
+          <i class="fa-solid fa-lock icon-left"></i>
+          <input type="password" id="confirm-password" placeholder="Confirm Password" required autocomplete="new-password"/>
           <i class="fa-solid fa-eye-slash toggle-password" data-target="confirm-password"></i>
         </div>
-      
         <button type="submit" class="btn btn-primary">Register</button>
       </form>
-
 
       <p id="toggle-auth">
         Already have an account?
@@ -41,7 +40,6 @@
       </p>
     </div>
   </section>
-
-  <script src="auth.js"></script>
+  <script src="register.js" defer></script>
 </body>
 </html>

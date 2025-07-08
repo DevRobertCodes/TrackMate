@@ -16,7 +16,6 @@
     <div class="login-container">
       <h1 class="logo"><i class="fas fa-unlock"></i> Reset Password</h1>
       <p>Enter your username and answer your security question.</p>
-
       <form id="auth-form">
         <input type="text" id="reset-username" placeholder="Username" required />
         <select id="security-question" required>
@@ -28,6 +27,7 @@
         </select>
         <input type="text" id="security-answer" placeholder="Your Answer" required />
         <div class="input-wrapper">
+          <i class="fa-solid fa-lock icon-left"></i>
           <input type="password" id="password" placeholder="Enter New Password" required />
           <i class="fa-solid fa-eye-slash toggle-password" data-target="password"></i>
         </div>
@@ -40,7 +40,6 @@
       </form>
     </div>
   </section>
-
-  <script src="auth.js"></script>
+  <script src="reset.js" defer></script>
 </body>
 </html>

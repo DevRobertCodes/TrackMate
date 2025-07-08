@@ -18,10 +18,12 @@
   <section class="login-page" id="login-page">
     <div class="login-container">
         <h1 class="logo"><i class="fas fa-wallet"></i> TrackMate</h1>
-        <p id="intro"></p>
+        <p>Welcome back! Please log in to continue.</p>
+        <!-- Authentication Form -->
         <form id="auth-form">
           <input type="text" id="username" placeholder="Username" required />
          <div class="input-wrapper">
+           <i class="fa-solid fa-lock icon-left"></i>
            <input type="password" id="password" placeholder="Password" required />
            <i class="fa-solid fa-eye-slash toggle-password" data-target="password"></i>
          </div>
@@ -38,7 +40,6 @@
         </div>
     </div>
   </section>
-
-  <script src="auth.js"></script>
+  <script src="login.js" defer></script>
 </body>
 </html>

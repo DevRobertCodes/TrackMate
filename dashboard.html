@@ -8,21 +8,144 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
-  <section class="dashboard">
-    <div class="dashboard-content">
-      <h1 class="fade-in"><i class="fa-solid fa-hammer"></i> Dashboard Under Construction</h1>
-      <p class="slide-up">Hey <span id="user-name">User</span>, welcome to TrackMate! We're working hard to bring your dashboard to life. 🚧</p>
-      <p class="slide-up delay">Please stay tuned... 💡</p>
-      <div class="loader"></div>
+  <!-- Header -->
+<header class="dashboard-header">
+  <div class="header-content">
+    <!-- LEFT: Greeting -->
+    <div class="greeting">
+      <i class="fa-solid fa-user"></i>
+      <span>Welcome, <span id="user-name">User</span>!</span>
     </div>
-  </section>
 
-  <script>
-    // Optional: Display current user's name
-    const currentUser = JSON.parse(localStorage.getItem("currentUser"));
-    if (currentUser && currentUser.username) {
-      document.getElementById("user-name").textContent = currentUser.username;
-    }
-  </script>
+    <!-- RIGHT: Logout -->
+    <button class="logout-btn" id="logout-btn">
+      <i class="fas fa-sign-out-alt"></i> Logout
+    </button>
+  </div>
+</header>
+
+  <main class="dashboard-main">
+    <div class="dashboard-grid">
+      
+      <!-- Financial Overview Cards -->
+      <section class="overview-section">
+        <h2><i class="fas fa-chart-line"></i> Financial Overview</h2>
+        <div class="overview-cards">
+          <div class="card balance-card">
+            <div class="card-icon">
+              <i class="fas fa-wallet"></i>
+            </div>
+            <div class="card-content">
+              <h3>Total Balance</h3>
+              <p class="amount" id="total-balance">$0.00</p>
+            </div>
+          </div>
+          
+          <div class="card income-card">
+            <div class="card-icon">
+              <i class="fas fa-arrow-up"></i>
+            </div>
+            <div class="card-content">
+              <h3>Monthly Income</h3>
+              <p class="amount" id="monthly-income">$0.00</p>
+            </div>
+          </div>
+          
+          <div class="card expense-card">
+            <div class="card-icon">
+              <i class="fas fa-arrow-down"></i>
+            </div>
+            <div class="card-content">
+              <h3>Monthly Expenses</h3>
+              <p class="amount" id="monthly-expenses">$0.00</p>
+            </div>
+          </div>
+          
+          <div class="card savings-card">
+            <div class="card-icon">
+              <i class="fas fa-piggy-bank"></i>
+            </div>
+            <div class="card-content">
+              <h3>Monthly Savings</h3>
+              <p class="amount" id="monthly-savings">$0.00</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Quick Actions -->
+      <section class="actions-section">
+        <h2><i class="fas fa-bolt"></i> Quick Actions</h2>
+        <div class="action-buttons">
+          <button class="action-btn add-income-btn" id="add-income-btn">
+            <i class="fas fa-plus-circle"></i>
+            <span>Add Income</span>
+          </button>
+          <button class="action-btn add-expense-btn" id="add-expense-btn">
+            <i class="fas fa-minus-circle"></i>
+            <span>Add Expense</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- Recent Transactions -->
+      <section class="transactions-section">
+        <h2><i class="fas fa-history"></i> Recent Transactions</h2>
+        <div class="transactions-container">
+          <div id="transactions-list" class="transactions-list">
+            <div class="no-transactions">
+              <i class="fas fa-receipt"></i>
+              <p>No transactions yet. Add your first transaction!</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Add Transaction Modal -->
+  <div id="transaction-modal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 id="modal-title">Add Transaction</h3>
+        <span class="close" id="close-modal">&times;</span>
+      </div>
+      <form id="transaction-form">
+        <div class="form-group">
+          <label for="transaction-type">Type</label>
+          <select id="transaction-type" required>
+            <option value="expense">Expense</option>
+            <option value="income">Income</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="transaction-amount">Amount ($)</label>
+          <input type="number" id="transaction-amount" step="0.01" min="0.01" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="transaction-description">Description</label>
+          <input type="text" id="transaction-description" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="transaction-category">Category</label>
+          <select id="transaction-category" required>
+            <!-- Options will be populated by JavaScript -->
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="transaction-date">Date</label>
+          <input type="date" id="transaction-date" required>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Add Transaction</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="dashboard.js"></script>
 </body>
 </html>
